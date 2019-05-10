@@ -1,0 +1,327 @@
+/* typography */
+
+@font-face {
+	font-family:"vag-rundschrift-d";
+	src:url(VAG-Rundschrift-D_47301.ttf);
+}
+
+@font-face {
+	font-family:"AmaticSC-Bold";
+	src:url(AmaticSC-bold.ttf);
+}
+
+@font-face {
+	font-family:"AmaticSC-Regular";
+	src:url(AmaticSC-Regular.ttf);
+}
+
+@font-face {
+	font-family:"JosefinSans-Bold";
+	src:url(JosefinSans-Bold.ttf);
+}
+
+@font-face {
+	font-family:"JosefinSans-Regular";
+	src:url(JosefinSans-Regular.ttf);
+}
+
+@font-face {
+	font-family:"JosefinSans-Light";
+	src:url(JosefinSans-Light.ttf);
+}
+
+@font-face {
+	font-family:"2dumb";
+	src:url(2dumb-webfont.woff) format("woff"), url(2dumb-webfont.woff2) format("woff2");
+}
+
+@font-face {
+	font-family:"3dumb";
+	src:url(3dumb-webfont.woff) format("woff"), url(3dumb-webfont.woff2) format("woff2");
+}
+
+:root {
+	--yellow:rgb(255,198,12);
+	--blue:rgb(37,188,247);
+	--green:rgb(14, 173, 105);
+	--violet:rgb(158,28,206);
+	--soft-violet:rgb(215,146,240);
+	--bright-red:rgb(239,66,102);
+	--soft-red:rgb(249,184,197);
+	--white:#FFFFFF;
+	--black:#000000;
+}
+
+.match {
+	background-color:var(--yellow);
+}
+
+.count {
+	background-color:var(--blue);
+}
+
+.shapes {
+	background-color:var(--green);
+}
+
+.solve {
+	background-color:var(--violet);
+}
+
+.main {
+	background-color:var(--bright-red);
+}
+
+
+body {
+	margin:0 0 0 0;
+	font-family:"JosefinSans-Regular";
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family:"vag-rundschrift-d";
+	margin-bottom:1vh;
+}
+
+a {
+	text-decoration:none;
+	color:var(--white);
+}
+
+a:hover{
+/*	color:var(--yellow);*/
+	text-decoration:underline;
+}
+
+nav {
+	position:fixed;
+	top:0;
+	left:0;
+	height:2vh;
+	width:47.5vw;
+	color:var(--white);
+	padding-top:0.5%;
+	padding-bottom:2%;
+	padding-left:2.5%;
+	margin-bottom:5vh;
+	font-family:"3dumb";
+	z-index:2;
+}
+
+.bg-bright-red {
+	background-color:var(--soft-red);
+}
+.text-bright-red {
+	color:var(--bright-red);
+}
+
+
+.bg-violet {
+	background-color:var(--soft-violet);
+	width:100vw;
+}
+.text-violet {
+	color:var(--violet);
+}
+
+
+.title {
+	font-size:2.1em;
+	margin:0;
+}
+
+p {
+	font-family:"JosefinSans-Regular";
+/*	font-size:.8em;*/
+	margin:0;
+	line-height:1.5;
+}
+
+section {
+	display:-ms-grid;
+	-ms-grid-template-rows:50vh;
+	-ms-grid-template-columns:1fr 1fr 1fr 1fr;
+	-ms-grid-gap:0 0;
+	display:grid;
+	grid-template-rows:50vh;
+	grid-template-columns:1fr 1fr 1fr 1fr;
+	grid-gap:0 0;
+	height:100vh;
+	width:100vw;
+}
+
+section div{
+	padding-top:5%;
+	padding-left:5%;
+	color:var(--white);
+}
+
+.large {
+	-ms-grid-column:span 2;
+	-ms-grid-row:span 2;
+	grid-column:span 2;
+	grid-row:span 2;
+/*	padding-left:1%;*/
+}
+
+.tall {
+	-ms-grid-column:span 1;
+	-ms-grid-row:span 2;
+	grid-column:span 1;
+	grid-row:span 2;
+	z-index:1;
+}
+
+.fox {
+	background-image:url(fox.svg); 
+	background-repeat:no-repeat; 
+	background-size:60% 60%; 
+	background-position:130% 100%;
+
+	padding-top:38.5%;
+}
+
+.lion,
+.blue-bird,
+.hippo,
+.giraffe,
+.zoo1,
+.zoo2 {
+	background-repeat:no-repeat;
+	background-position:right bottom;
+}
+
+.lion {
+	background-image:url(lion.svg);
+	background-size:80% 80%; 
+	color:rgba(255,255,255,0.2);
+}
+
+.blue-bird {
+	background-image:url(blue-bird.svg);
+	background-size:80% 80%; 
+	color:rgba(255,255,255,0.2);
+}
+
+.hippo {
+	background-image:url(hippo.svg);
+	background-size:90% 90%; 
+	color:rgba(255,255,255,0.2);
+}
+
+.giraffe {
+	background-image:url(giraffe.svg);
+	background-size:contain;
+}
+
+.zoo1 {
+	background-image:url(zoo1.png);
+	background-size:100% 90%;
+	background-position:left bottom;
+}
+
+.zoo2 {
+	background-image:url(zoo2.png);
+	background-size:100% 90%;
+}
+
+/* solve */
+
+#Q1,
+#Q2,
+#Q3 {
+
+/* Forgot what I was gonna put here .... */
+
+}
+
+.problem,
+.answers {
+	margin-top:5vh;
+	font-family:"AmaticSC-Bold";
+	font-size:1.5em;
+}
+
+.next {
+	padding-top:2%;
+	height:30px;
+	width:120px;
+	background-color:var(--green);
+	margin-top:5vh;
+}
+
+.block,
+.x-block,
+.a-block {
+	display:inline-block;
+	height:120px;
+	width:120px;
+	text-align:center;
+	font-size:4em;
+	font-family:"AmaticSC-Bold";
+	padding:auto;
+	padding-left:0;
+}
+
+.block {
+	background-color:var(--yellow);
+	color:var(--black);
+}
+
+.x-block {
+	background-color:var(--bright-red);
+	color:var(--white);
+}
+
+.a-block {
+	background-color:var(--yellow);
+	color:var(--black);
+	margin-top:3vh;
+	height:60px;
+	width:60px;
+	font-size:2em;
+	font-family:"AmaticSC-Regular";
+}
+
+/* tooltip from w3schools */
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  font-family:'JosefinSans-Regular';
+  /*border-bottom: 1px dotted black; */
+  /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  height:60px;
+  width: 240px;
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltiptext {
+	font-size:.9em;
+	font-family:'JosefinSans-Regular';
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext {
+  top: 0px;
+  left: 125%; 
+}
+
